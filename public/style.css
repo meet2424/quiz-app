@@ -35,7 +35,7 @@ footer p {
 }
 
 
-form.create-note {
+.create-note {
   position: relative;
   width: 480px;
   margin: 100px auto 20px auto;
@@ -44,14 +44,14 @@ form.create-note {
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
-form p{
+.create-note p{
     color:rgb(138, 137, 137);
   }
-  form h2{
+  .create-note h2{
   color:rgb(138, 137, 137);
   font-size: 1.2em;
 }
-  form.create-note input,label {
+  .create-note input,label {
     color:rgb(168, 166, 166);
     border: none;
     font-size: 1em;
@@ -61,7 +61,7 @@ form p{
   resize: none;
   margin-bottom: 15px;
 }
-form.create-note button {
+.create-note button {
   position: absolute;
   right: 18px;
   bottom: -18px;
