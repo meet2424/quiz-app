@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #eee;
+}
+
+header {
+  background-color: #8b3fee;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color:  #bba5e4;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: rgb(180, 179, 179);
+}
+
+
+form.create-note {
+  position: relative;
+  width: 480px;
+  margin: 100px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form p{
+    color:rgb(138, 137, 137);
+  }
+  form h2{
+  color:rgb(138, 137, 137);
+  font-size: 1.2em;
+}
+  form.create-note input,label {
+    color:rgb(168, 166, 166);
+    border: none;
+    font-size: 1em;
+  padding: 4px;
+  outline: none;
+  font-family: inherit;
+  resize: none;
+  margin-bottom: 15px;
+}
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #7a22ec;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+.center{
+  margin-left:auto;
+  margin-right:auto;
+}
