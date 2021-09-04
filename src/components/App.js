@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Header from "./Header";
-import Footer from "./Footer";
 import Home from "./Home";
 import Result from "./Result";
 import Question from "./Question";
@@ -108,7 +107,7 @@ function App() {
       handleSubmit={handleSubmit}
     />}
     {result && <Result ansArray={ansArray} data={data} options={optionsArray} score={score} />}
-    <Footer />
+
 
   </div>
 

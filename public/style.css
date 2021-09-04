@@ -1,25 +1,44 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+ 
+
+
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  
 }
 html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #eee;
+  background: #3e367e;
 }
 
-header {
-  background-color: #8b3fee;
-  padding: 16px 32px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+ 
+
+.header {
+  /* background: #3d5a80; */
+  /* color:  rgb(255, 243, 255);  */
+  color: #aeb8fe;
+   font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 400; 
+    padding-left: 675px;
+    padding-top: 29px; 
+    padding-bottom: 22px; 
 }
 
-header h1 {
-  color:  #bba5e4;
-  font-family: "McLaren", cursive;
-  font-weight: 200;
+.home-card{
+  border-radius: 5%;
+  font-family: "McLaren", cursive; 
+   margin: 50px auto ;
+  width: 500px;
+  background-color: #f45b69;
+  color: #f9f9f7;
+  height: 300px;
+  text-align: center;
+  padding-top: 40px;
 }
 
 footer {
@@ -34,49 +53,142 @@ footer p {
   color: rgb(180, 179, 179);
 }
 
+.start-quiz{
+    background: #9e0059;
+    width: 126px;
+    height: 50px;
+    font-size: 20px;
+    margin-left: 700px;
+    margin-top: 199px;
+    /* padding: 9px 16px; */
+    border:0px;
+    border-radius: 10%;
+}
+
+.btn {
+  /* background: #7a22ec;
+  background-image: -webkit-linear-gradient(top, #7a22ec, #7a22ff);
+  background-image: -moz-linear-gradient(top, #7a22ec, #7a22ff);
+  background-image: -ms-linear-gradient(top, #7a22ec, #7a22ff);
+  background-image: -o-linear-gradient(top, #7a22ec, #7a22ff);
+  background-image: linear-gradient(to bottom, #7a22ec, #7a22ff);
+  -webkit-border-radius: 60;
+  -moz-border-radius: 60; */
+  background-color: #7a22ec;
+  border-radius: 60px;
+  border:0;
+  -webkit-box-shadow: 0px 2px 3px #4a4a4a;
+  -moz-box-shadow: 0px 2px 3px #4a4a4a;
+  box-shadow: 0px 2px 3px #4a4a4a;
+  font-family: Arial;
+  color: #ebebeb;
+  font-size: 19px;
+  padding: 6px 20px 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover {
+  background:  #8230fc;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
 
 .create-note {
   position: relative;
-  width: 480px;
-  margin: 100px auto 20px auto;
-  background: #fff;
+  width: 490px;
+  margin-top: 50px;
+  margin-left: 500px;
+  /* background: #fff; */
+  /* background-color: #a7e8bd; */
+  background-color: #5aa9e6;
+  color:#160f29;
   padding: 15px;
-  border-radius: 7px;
+  border-radius: 7px; 
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
 .create-note p{
-    color:rgb(138, 137, 137);
+    font-size: 1em;
+    color:#eff6e0;
   }
   .create-note h2{
-  color:rgb(138, 137, 137);
-  font-size: 1.2em;
+    /* color:rgb(138, 137, 137); */
+    color:#ebebeb;
+    font-size: 1.2em;
 }
-  .create-note input,label {
-    color:rgb(168, 166, 166);
-    border: none;
-    font-size: 1em;
-  padding: 4px;
-  outline: none;
-  font-family: inherit;
-  resize: none;
-  margin-bottom: 15px;
+.create-note .dummy {
+  margin-bottom: 30px;
 }
-.create-note button {
+.create-note .button-next {
   position: absolute;
   right: 18px;
-  bottom: -18px;
+  bottom: 0;
+  color: #7a22ec; 
+  margin-bottom: 10px; 
+  cursor: pointer;
+  outline: none;
+}
+.create-note .button-previous {
+  position: absolute;
+  left: 18px;
+  bottom: 0;
+  color: #7a22ec;
+  margin-bottom: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.create-note .button-submit {
+  position: absolute;
+  right: 18px;
+  bottom: 0;
   background: #7a22ec;
   color: #fff;
   border: none;
-  border-radius: 50%;
-  width: 36px;
+  border-radius: 10%; 
+  margin-bottom: 10px;
+  width: 65px;
   height: 36px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
 }
+.padding{
+  background: #1368aa;
+  padding:10px 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
 
-.center{
-  margin-left:auto;
-  margin-right:auto;
+.result {
+  position: relative;
+  width: 800px;
+  margin-top: 50px;
+  margin-left: 375px;
+  /* background: #fff; */
+  /* background-color: #a7e8bd; */
+  background-color: #5aa9e6;
+  color:#160f29;
+  padding: 15px;
+  border-radius: 7px; 
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+.result p{
+    font-size: 1em;
+    color:#eff6e0;
+  }
+  .result h2{
+    /* color:rgb(138, 137, 137); */
+    color:#ebebeb;
+    font-size: 1.2em;
+}
+
+p.paper{
+  color: #c5dffd;
+  /* color:#22ffc0; */
+  /* color: #ff4958; */
+  margin-bottom: 20px;
 }
