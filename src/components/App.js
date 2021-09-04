@@ -5,12 +5,6 @@ import Footer from "./Footer";
 import Home from "./Home";
 import Result from "./Result";
 import Question from "./Question";
-// import { Check } from "@material-ui/icons";
-// import AppBar from '@material-ui/core/AppBar';
-// import Toolbar from '@material-ui/core/Toolbar'
-// import TypoGraphy from '@material-ui/core/Typography'
-// import data from "./data"
-
 let ansArray = []
 
 
@@ -20,9 +14,11 @@ function App() {
   const [optionsArray, setOptionsArray] = useState([])
 
 
+  const baseURL = "https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple"
+
+
   React.useEffect(() => {
 
-    const baseURL = "https://opentdb.com/api.php?amount=2&category=9&difficulty=easy&type=multiple"
     axios.get(baseURL).then((resp) => {
 
       let responseData = resp.data.results;
@@ -57,8 +53,7 @@ function App() {
 
   const [start, setStart] = useState(true)
   const [index, setIndex] = useState(0)  //Create Index 
-  // const [ansArray, setAnsArray] = useState([])
-  // const [check, setCheck] = useState("")
+
 
   const startQuiz = () => {  //Quiz Started
     setStart(false)
@@ -68,16 +63,9 @@ function App() {
     console.log("n");
     console.log(checked);
     if (ansArray[index] >= 0) {
-      // setAnsArray(pre => {
-      //   pre[index] = checked
-      //   return [...pre]
-      // })
       ansArray[index] = checked
       console.log("o");
     } else {
-      // setAnsArray(pre => {
-      //   return [...pre, checked]
-      // })
       ansArray.push(checked)
       console.log("f");
     }
@@ -105,7 +93,6 @@ function App() {
     })
 
   }
-
 
   return <div>
     <Header />
