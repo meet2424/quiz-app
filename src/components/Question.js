@@ -6,6 +6,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+const he = require("he")
 
 
 function Question(props) {
@@ -19,17 +20,14 @@ function Question(props) {
         setRequire(true)
     }
 
-
     const previous = () => {  // Previous   
         props.handlePrevious(props.index, checked)
         setRequire(true)
     }
 
-    const next = () => {  // Next 
-        console.log(checked);
-        (checked || require) && props.handleNext(props.index, checked)
+    const next = () => {  // Next  
+        (checked || require) ? props.handleNext(props.index, checked) : alert("Please answer the current question");
         setRequire(false)
-
     }
 
     return <div >
@@ -39,22 +37,24 @@ function Question(props) {
                     <span style={{ fontSize: "0.9rem" }}> (5 points)
                     </span>
                 </h2>
-
                 <br />
-                <p>{props.question}</p>
+                <p>{he.decode(props.question)}</p>
                 <br />
-                <FormControlLabel value="0" control={<Radio />} label={props.option[props.index][0]} />
-                <FormControlLabel value="1" control={<Radio />} label={props.option[props.index][1]} />
-                <FormControlLabel value="2" control={<Radio />} label={props.option[props.index][2]} />
-                <FormControlLabel value="3" control={<Radio />} label={props.option[props.index][3]} />
+                <FormControlLabel value="0" control={<Radio size="medium" />} label={he.decode(props.option[props.index][0])} />
+                <FormControlLabel value="1" control={<Radio size="medium" />} label={he.decode(props.option[props.index][1])} />
+                <FormControlLabel value="2" control={<Radio size="medium" />} label={he.decode(props.option[props.index][2])} />
+                <FormControlLabel value="3" control={<Radio size="medium" />} label={he.decode(props.option[props.index][3])} />
 
                 <div className="dummy" />
+
                 {(props.index !== 0) && <ArrowBackIosIcon onClick={previous} className="button-previous" fontSize="large" />}
 
                 {(props.index !== 9) && <ArrowForwardIosIcon onClick={next} className="button-next" fontSize="large" />}
 
-                {(props.index === 9) && <button onClick={(() => require && props.handleSubmit(checked))} className="button-submit">Submit</button>}
-
+                {(props.index === 9) && <button
+                    onClick={(() => (checked || require) ? props.handleSubmit(checked) : alert("Please answer the current question"))}
+                    className="button-submit">Submit
+                </button>}
             </RadioGroup>
         </FormControl>
 

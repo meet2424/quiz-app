@@ -1,5 +1,7 @@
  
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
  
 
 
@@ -65,15 +67,7 @@ footer p {
     border-radius: 10%;
 }
 
-.btn {
-  /* background: #7a22ec;
-  background-image: -webkit-linear-gradient(top, #7a22ec, #7a22ff);
-  background-image: -moz-linear-gradient(top, #7a22ec, #7a22ff);
-  background-image: -ms-linear-gradient(top, #7a22ec, #7a22ff);
-  background-image: -o-linear-gradient(top, #7a22ec, #7a22ff);
-  background-image: linear-gradient(to bottom, #7a22ec, #7a22ff);
-  -webkit-border-radius: 60;
-  -moz-border-radius: 60; */
+.btn { 
   background-color: #7a22ec;
   border-radius: 60px;
   border:0;
@@ -101,23 +95,21 @@ footer p {
   position: relative;
   width: 490px;
   margin-top: 50px;
-  margin-left: 500px;
-  /* background: #fff; */
-  /* background-color: #a7e8bd; */
-  background-color: #5aa9e6;
+  margin-left: 500px;   background-color: #5aa9e6;
   color:#160f29;
   padding: 15px;
   border-radius: 7px; 
   box-shadow: 0 1px 5px rgb(138, 137, 137);
+  font-size: 1.4em; 
 }
-.create-note p{
-    font-size: 1em;
-    color:#eff6e0;
+
+.create-note p{ 
+    color:#eff6e0; 
+  font-family: 'Roboto', sans-serif;
   }
   .create-note h2{
-    /* color:rgb(138, 137, 137); */
     color:#ebebeb;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 .create-note .dummy {
   margin-bottom: 30px;
@@ -175,6 +167,7 @@ footer p {
   padding: 15px;
   border-radius: 7px; 
   box-shadow: 0 1px 5px rgb(138, 137, 137);
+  font-family: 'Montserrat', sans-serif;
 }
 .result p{
     font-size: 1em;
@@ -182,7 +175,7 @@ footer p {
   }
   .result h2{
     /* color:rgb(138, 137, 137); */
-    color:#ebebeb;
+    color:#d8e2dc;
     font-size: 1.2em;
 }
 

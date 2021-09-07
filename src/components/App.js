@@ -13,7 +13,7 @@ function App() {
   const [optionsArray, setOptionsArray] = useState([])
 
 
-  const baseURL = "https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple"
+  const baseURL = "https://opentdb.com/api.php?amount=10&category=31&difficulty=easy&type=multiple"
 
 
   React.useEffect(() => {
@@ -48,47 +48,43 @@ function App() {
   }, []);
 
 
-  console.log(data);
-
   const [start, setStart] = useState(true)
   const [index, setIndex] = useState(0)  //Create Index 
+  const [result, setResult] = useState(false)
+  const [score, setScore] = useState(0)
 
 
   const startQuiz = () => {  //Quiz Started
     setStart(false)
   }
 
-  function handleNext(index, checked) { // Next
-    console.log("n");
-    console.log(checked);
+  const handleNext = (index, checked) => { // Next 
     if (ansArray[index] >= 0) {
       ansArray[index] = checked
-      console.log("o");
     } else {
       ansArray.push(checked)
-      console.log("f");
     }
-    // setCheck(checked)
     setIndex(index + 1)
-    console.log(ansArray);
   }
 
-  function handlePrevious(index) { //Previous
-    console.log("p");
+  const handlePrevious = (index, checked) => { //Previous 
+    if (ansArray[index] >= 0 && ansArray[index] !== checked) {
+      ansArray[index] = checked
+    }
+    else {
+      ansArray.push(checked)
+    }
     setIndex(index - 1)
   }
-  const [result, setResult] = useState(false)
-  const [score, setScore] = useState(0)
 
-  function handleSubmit(checked) {  //Submit
-    console.log("s");
-    ansArray.push(checked)
-    console.log(ansArray);
+  const handleSubmit = (checked) => {  //Submit 
+    if (!(ansArray[index] >= 0)) {
+      ansArray.push(checked)
+    }
     setResult(true)
     setStart(true)
-
     ansArray.filter((each, index) => {
-      return optionsArray[index][each] === data[index].correct_answer && setScore(pre => pre + 5)
+      return (optionsArray[index][each] === data[index].correct_answer && setScore(pre => pre + 5))
     })
 
   }
@@ -104,11 +100,8 @@ function App() {
       check={ansArray}
       handleNext={handleNext}
       handlePrevious={handlePrevious}
-      handleSubmit={handleSubmit}
-    />}
+      handleSubmit={handleSubmit} />}
     {result && <Result ansArray={ansArray} data={data} options={optionsArray} score={score} />}
-
-
   </div>
 
 }

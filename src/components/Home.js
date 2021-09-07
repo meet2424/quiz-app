@@ -1,6 +1,4 @@
 import React from "react";
-// import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
-
 function Home(props) {
 
     return <div>
@@ -26,15 +24,15 @@ function Home(props) {
         <div>
             <div className="home-card">
 
-                <p style={{ fontSize: "30px" }}>Welcome to the Online<br /> Quiz App
-                    {/* <QuestionAnswerIcon /> */}
-                </p>
-
-                <br /><br /><br />
-                <button onClick={() => props.startQuiz()}
-                    className="btn">
-                    Start Quiz
+                <p style={{ fontSize: "30px" }}>Welcome to the Online<br /> Quiz App🤩</p><br />
+                <p style={{ fontSize: "25px" }}>Press 👇 to start the quiz</p>
+                <br /><br />
+                <button
+                    onClick={() => props.startQuiz()}
+                    className="btn">Start Quiz
                 </button>
+                <br /><br />
+                <p style={{ fontSize: "25px" }}>All The Best👍</p>
             </div>
         </div>
     </div>
